@@ -9,6 +9,7 @@ body {
   background-color: #101010;
   color: white;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
 .title {
@@ -19,9 +20,12 @@ body {
   padding: 10px;
   box-sizing: border-box;
   margin-bottom: 20px;
-  width: 100%; /* Occupy full width */
-  max-width: 400px; /* Limit maximum width */
-  margin: 20px auto; /* Center horizontally */
+  width: 100%;
+  /* Occupy full width */
+  max-width: 400px;
+  /* Limit maximum width */
+  margin: 20px auto;
+  /* Center horizontally */
   border-radius: 10px;
   border: none;
   user-select: none;
@@ -65,16 +69,23 @@ a.link:hover {
 }
 
 .navbar {
-  width: 98%;
+  width: 99.5%;
   padding: 5px;
   margin: 5px;
+  display: flex;
+  z-index: 9999;
   align-items: center;
   align-self: center;
-  height: 50px;
+  top: 2%;
+  height: 75px;
   backdrop-filter: blur(10px);
   opacity: 0.7;
-  display: flex;
   border-radius: 10px;
-  background: #4f4f4f;
+  background: #303030;
   box-shadow: 0px 0px 10px rgba(190, 190, 190, 0.7);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
 }
