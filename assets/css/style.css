@@ -83,9 +83,28 @@ a.link:hover {
   border-radius: 10px;
   background: #303030;
   box-shadow: 0px 0px 10px rgba(190, 190, 190, 0.7);
+  justify-content: space-between;
+  font-size: 20px;
 }
 
 .icons {
   display: flex;
   align-items: center;
+}
+
+.logo {
+  border-radius: 25px;
+  padding: 20px;
+  width: 100px;
+  height: px;
+  display: flex;
+  transition: 0.5s;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.navlink {
+  font-size: 16px;
 }
