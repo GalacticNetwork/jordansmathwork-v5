@@ -1,13 +1,16 @@
-const input = document.querySelector('input');
-const games = document.querySelectorAll('.link');
+const boxes = document.querySelectorAll('.list');
 
-input.addEventListener('input', () => {
-  const searchTerm = input.value.toLowerCase();
-  games.forEach(game => {
-    if (game.alt.toLowerCase().includes(searchTerm)) {
-      game.style.display = 'block';
-    } else {
-      game.style.display = 'none';
-    }
-  });
-});
+function filterBoxes() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+    boxes.forEach(box => {
+        const boxTitle = box.querySelector('span').textContent.toLowerCase();
+        if (boxTitle.includes(searchTerm)) {
+            box.style.display = 'block';
+        } else {
+            box.style.display = 'none';
+        }
+    });
+}
+
+document.getElementById('searchInput').addEventListener('input', filterBoxes);
