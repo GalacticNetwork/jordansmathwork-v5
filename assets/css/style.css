@@ -146,6 +146,7 @@ a.link:hover {
   display: flex;
   margin: 20px auto;
   flex-wrap: wrap;
+  align-content: center;
 }
 
 #themepicker {

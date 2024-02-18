@@ -143,28 +143,23 @@ document.getElementById('scroll-down').addEventListener('click', function() {
       margin-bottom: 50px;
       width: 30%;
       height: 30%;
-      background-image: url('jm.webp');
-      background-size: contain; 
-      background-repeat: no-repeat; 
-      background-position: right top;
-      opacity: 0; 
-      animation: fadeIn 5s forwards; 
-      pointer-events: none; 
-      z-index: -1;
+      z-index: -1; /* Move the image behind other content */
+      opacity: 0; /* Initially hidden */
+      animation: fadeIn 5s forwards; /* Animation to reveal the image */
     }
 
-    
+    /* Animation keyframes */
     @keyframes fadeIn {
       from { opacity: 0; }
-      to { opacity: 1; }
+      to { opacity: -1; }
     }
 
-   
+    /* Style for the main content */
     .content {
       position: relative;
-      z-index: -1; 
+      z-index: -1; /* Ensure content appears above the image */
       text-align: center;
-      margin-top: 10vh; 
+      margin-top: 10vh; /* Adjust as needed */
     }
   </style>
   </head>
