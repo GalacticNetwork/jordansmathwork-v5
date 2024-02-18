@@ -63,7 +63,16 @@ a.link:hover {
   margin: 2px 2px;
   cursor: pointer;
   border-radius: 12px;
-  box-shadow: 0 0 1vw #857100;
+  box-shadow: 0 0 1vw var(--txtcolor);
+}
+.ad {
+  font-size: 50px;
+}
+.injmwwetrust {
+  font-size: 30px;
+}
+.span {
+  width: fit-content;
 }
 
 .image {
@@ -84,9 +93,7 @@ a.link:hover {
   border-radius: 12px;
   transition: background-color 0.3s,
     color 0.2s, transform .4s, box-shadow 1s;
-
 }
-
 .navbar {
   width: 99.5%;
   padding: 5px;
@@ -130,6 +137,10 @@ a.link:hover {
   margin: 0px 10px;
   text-decoration: none;
   color: var(--txtcolor);
+  transition: 0.3s;
+}
+.navlink:hover {
+  transform: scale(1.1);
 }
 .box {
   display: flex;

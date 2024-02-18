@@ -24,6 +24,11 @@ body[theme="legacyv3"] {
   --navbar: #706529;
   --txtcolor: #adad43;
 }
+body[theme="legacyv4"] {
+  --bgcolor: #1a1a1a;
+  --navbar: #262626;
+  --txtcolor: yellow;
+}
 body[theme="discord"] {
   --bgcolor: #36393F;
   --navbar: #8992fb;
