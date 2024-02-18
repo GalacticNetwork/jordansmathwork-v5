@@ -165,6 +165,19 @@ select {
 }
 select option {
   font-weight: bold;
-  color: black;
-  background: var(--bgcolor); 
+  color: white;
+  background: #101010; 
+}
+
+.btn {
+  border-radius: 10px;
+  margin-top: 10px;
+  background: transparent;
+  color: white;
+  text-align: center;
+  width: 150px;
+  height: 30px;
+  border-style: solid;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s ease all;
 }

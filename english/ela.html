@@ -242,7 +242,13 @@ c   backButton.addEventListener('click', () => {
     const type = urlParams.get('type')
     if (type == "3kh0") {
       document.getElementById('gameFramey').src = 'https://raw.githack.com/galacticnetwork/3kh0-assets/main/' + file + '/index.html'
-    } else {
+    
+    } if (type == "banana") {
+        document.getElementById('gameFramey').src = 'https://raw.githack.com/BinBashBanana/gfiles/master/gfiles/html5/' + file + '/index.html'     
+      
+      } if (type == "swf") {
+          document.getElementById('gameFramey').src = 'https://raw.githack.com/BinBashBanana/gfiles/master/gfiles/flash/index.html?swf=' + file
+        }  else {
       document.getElementById('gameFramey').src = "/english/src/" + file
     }
   </script>
