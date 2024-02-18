@@ -193,3 +193,43 @@ select option {
   -webkit-transition: 0.5s all ease;
   transition: 0.5s ease all;
 }
+
+
+.searchInput {
+  background-color: #262626;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 8px 12px;
+  transition: 1s;
+  width: 550px;
+}
+
+.searchInput:focus {
+  border-color: var(--navbar);
+  box-shadow: 0 0 5px var(--txtcolor);
+  outline: none;
+
+}
+
+
+.searchInput:hover {
+  width: 900px;
+
+}
+
+
+
+.input2 {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  cursor: text;
+  border-style: solid;
+  margin-top: 10px;
+  border: none;
+  background: black;
+  color: white;
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+}

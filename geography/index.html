@@ -29,9 +29,26 @@
   <br>
   <div align="center">
   <h2>Settings</h2>
-    <h4>Cloaking</h4>
+    <h4>History Hiding</h4>
     <button class="btn" onclick="ab()">History Hider</button>
     <button class="btn" onclick="buffedAB()">Advanced history hider</button>
+    <br>
+    <br>
+    <hr>
+    <h4>Tab Cloaking</h4>
+    <div class="buttons">
+      <input class="input2" id="title" id="tilte" class="input" placeholder="Title" onkeyup="setTitle(this.value)">
+      <input class="input2 " id="icon" class="input" placeholder="Favicon" onkeyup="setFavicon(this.value.trim())">
+      <button class="btn" onclick="resetTab()">Reset</button>
+<br>
+      <br>
+      <hr>
+    </div>
+    <br>
+    <strong><h3>To switch to an educational site, do shift + the ` key.</h3></strong>
+    <br>
+    <br>
+    <hr>
     <h4>Themes</h4>
   <select id="themepicker">
     <option value="select">Select</option>
