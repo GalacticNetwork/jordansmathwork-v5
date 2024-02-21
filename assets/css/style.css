@@ -51,6 +51,7 @@ body {
 }
 
 a.link:hover {
+  font-family: 'Poppins', sans-serif;
   background-color: transparent;
   transform: scale(1.1);
   color: var(--txtcolor);
@@ -80,6 +81,7 @@ a.link:hover {
 }
 
 .button {
+  font-family: 'Poppins', sans-serif;
   background-color: transparent;
   border: none;
   color: white;
