@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jordan's Math Work is a comprehensive educational platform designed to help students master various mathematical concepts.">
+  <title>Jordan's Math Work | Settings</title>
+  <link rel="icon" href="/assets/images/jmw.png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+  <link href" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a70619ef6c.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #222;
+      color: #fff;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .navbar {
+      background-color: #444;
+      padding: 10px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .logo {
+      width: 60px;
+      height: auto;
+    }
+    .icons a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+    .icons a:hover {
+      color: #ffd700;
+    }
+    h2 {
+      color: #fff;
+    }
+    h4 {
+      color: #ccc;
+    }
+    .btn {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-right: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    .btn:hover {
+      background-color: #444;
+    }
+    input, select {
+      padding: 15px;
+      margin-bottom: 20px;
+      width: calc(50% - 30px);
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    input:focus, select:focus {
+      outline: none;
+      background-color: #444;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #666;
+      margin: 20px 0;
+    }
+    .section {
+      background-color: #444;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    .section h4 {
+      margin-top: 0;
+      color: #ddd; /* made by clipped (: */
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="/"><img class="logo" src="/assets/images/jmw.png" alt="JMW Logo"></a>
+    <div class="icons">
+      <a class="navlink" href="/english"><i class="fa-solid fa-gamepad"></i> Games</a>
+      <a class="navlink" href="/history"><i class="fa-solid fa-headset"></i> Apps</a>
+      <a class="navlink" href="/science"><i class="fa-solid fa-mobile-button"></i> Chatbox</a>
+      <a class="navlink" href="/geography"><i class="fa-solid fa-gears"></i> Settings</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section">
+
+      <div class="history-hiding">
+        <center><h4>History Hiding</h4></center>
+        <center><button class="btn" onclick="ab()">ㅤㅤHistory Hiderㅤㅤ</button></center>
+        <br>
+        <center><button class="btn" onclick="buffedAB()">Advanced history hider</button></center>
+      </div>
+    </div>
+    <hr>
+    <div class="section">
+      <center><h4>Tab Cloaking</h4></center>
+      <center><input class="input" id="title" placeholder="Title" onkeyup="setTitle(this.value)"></center>
+      <center><input class="input" id="icon" placeholder="Favicon" onkeyup="setFavicon(this.value.trim())"></center>
+      ㅤ<center><button class="btn" onclick="resetTab()">Reset</button></center>
+    </div>
+    <hr>
+    <div class="section">
+      <center><h4>Themes</h4></center>
+      <center><select id="themepicker"></center>
+        <center><option value="select">Select</option></center>
+        <option value="classic">Classic</option>
+        <option value="light">Light</option>
+        <option value="cornhub">CornHub</option>
+        <option value="midnight">Midnight</option>
+        <option value="legacyv3">Jordan's Math Work V3</option>
+        <option value="legacyv4">Jordan's Math Work V4</option>
+        <option value="discord">Discord</option>
+        <option value="incognito">Incognito</option>
+        <option value="cosmic">Cosmic</option>
+        <option value="cherry">Cherry</option>
+        <option value="ocean">Ocean</option>
+        <option value="3kh0">3kh0 (in honor of v4)</option>
+        <option value="rogue">Rogue (i was a developer)</option>
+        <option value="blooket">Blooket</option>
+        <option value="kahoot">Kahoot</option>
+        <option value="versatile">Versatile</option>
+        <option value="plexile">Plexile Arcade</option>
+      </select>
+    </div>
+  </div>
+  <script src="/assets/scripts/index.js"></script>
+  <script src="/assets/scripts/themes.js"></script>
+  <script src="/assets/scripts/panic.js"></script>
+  <script src="/assets/scripts/hider.js"></script>
+  <script src="/assets/scripts/ab.js"></script>
+</body>
+</html>
+
+</style>
+
