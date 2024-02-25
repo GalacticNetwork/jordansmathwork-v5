@@ -50,49 +50,48 @@
   </div>
   <br>
   <br>
-  <div align="center">
-  <h2>Settings</h2>
-    <h4>History Hiding</h4>
-    <button class="btn" onclick="ab()">History Hider</button>
-    <button class="btn" onclick="buffedAB()">Advanced history hider</button>
-    <br>
-    <br>
-    <hr>
-    <h4>Tab Cloaking</h4>
-    <div class="buttons">
-      <input class="input2" id="title" id="tilte" class="input" placeholder="Title" onkeyup="setTitle(this.value)">
-      <input class="input2 " id="icon" class="input" placeholder="Favicon" onkeyup="setFavicon(this.value.trim())">
-      <button class="btn" onclick="resetTab()">Reset</button>
-<br>
-      <br>
+    <div class="container">
+      <div class="section">
+
+        <div class="history-hiding">
+          <center><h4>History Hiding</h4></center>
+          <center><button class="btn" onclick="ab()">ㅤㅤHistory Hiderㅤㅤ</button></center>
+          <br>
+          <center><button class="btn" onclick="buffedAB()">Advanced history hider</button></center>
+        </div>
+      </div>
       <hr>
+      <div class="section">
+        <center><h4>Tab Cloaking</h4></center>
+        <center><input class="input2" id="title" placeholder="Title" onkeyup="setTitle(this.value)"></center>
+        <center><input class="input2" id="icon" placeholder="Favicon" onkeyup="setFavicon(this.value.trim())"></center>
+        ㅤ<center><button class="btn" onclick="resetTab()">Reset</button></center>
+      </div>
+      <hr>
+      <div class="section">
+        <center><h4>Themes</h4></center>
+        <center><select id="themepicker"></center>
+          <center><option disabled value="select">Select Theme</option></center>
+          <option value="classic">Classic</option>
+          <option value="light">Light</option>
+          <option value="cornhub">CornHub</option>
+          <option value="midnight">Midnight</option>
+          <option value="legacyv3">Jordan's Math Work V3</option>
+          <option value="legacyv4">Jordan's Math Work V4</option>
+          <option value="discord">Discord</option>
+          <option value="incognito">Incognito</option>
+          <option value="cosmic">Cosmic</option>
+          <option value="cherry">Cherry</option>
+          <option value="ocean">Ocean</option>
+          <option value="3kh0">3kh0 (in honor of v4)</option>
+          <option value="rogue">Rogue (i was a developer)</option>
+          <option value="blooket">Blooket</option>
+          <option value="kahoot">Kahoot</option>
+          <option value="versatile">Versatile</option>
+          <option value="plexile">Plexile Arcade</option>
+        </select>
+      </div>
     </div>
-    <br>
-    <strong><h3>To switch to an educational site, do the ` key.</h3></strong>
-    <br>
-    <br>
-    <hr>
-    <h4>Themes</h4>
-  <select id="themepicker">
-    <option value="select">Select</option>
-    <option value="classic">Classic</option>
-    <option value="light">Light</option>
-    <option value="cornhub">CornHub</option>
-    <option value="midnight">Midnight</option>
-    <option value="legacyv3">Jordan's Math Work V3</option>
-    <option value="legacyv4">Jordan's Math Work V4</option>
-    <option value="discord">Discord</option>
-    <option value="incognito">Incognito</option>
-    <option value="cosmic">Cosmic</option>
-    <option value="cherry">Cherry</option>
-    <option value="ocean">Ocean</option>
-    <option value="3kh0">3kh0 (in honor of v4)</option>
-    <option value="rogue">Rogue (i was a developer)</option>
-    <option value="blooket">Blooket</option>
-    <option value="kahoot">Kahoot</option>
-    <option value="versatile">Versatile</option>
-    <option value="plexile">Plexile Arcade</option>
-  </select>
 </body>
   <script src="/assets/scripts/index.js"></script>
   <script src="/assets/scripts/themes.js"></script>

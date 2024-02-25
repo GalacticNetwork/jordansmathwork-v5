@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 @import url('/assets/css/themes.css');
 
 html {
@@ -48,6 +50,7 @@ body {
   border: none;
   user-select: none;
   outline: none;
+  font-family: 'Quicksand', sans-serif;
 }
 
 a.link:hover {
@@ -61,10 +64,10 @@ a.link:hover {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 2px 2px;
   cursor: pointer;
   border-radius: 12px;
   box-shadow: 0 0 1vw var(--txtcolor);
+  margin: 15px;
 }
 .ad {
   font-size: 50px;
@@ -88,13 +91,13 @@ a.link:hover {
   padding: 1px 1px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
-  margin: 2px 2px;
   cursor: pointer;
   border-radius: 12px;
   transition: background-color 0.3s,
     color 0.2s, transform .4s, box-shadow 1s;
+  margin: 15px;
+  display: inline-block;
 }
 .navbar {
   width: 99.5%;
@@ -148,22 +151,35 @@ a.link:hover {
   display: flex;
   margin: 20px auto;
   flex-wrap: wrap;
-  align-content: center;
+  justify-content: center;
 }
 
 #themepicker {
-  font-family: 'Montserrat', sans-serif;
-  text-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
-  color: var(--color);
+   padding: 15px;
+    margin-bottom: 20px;
+    width: calc(50% - 30px);
+    border: none;
+    border-radius: 5px;
+    background-color: var(--navbar);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+#themepicker:focus {
+  outline: none;
   background-color: var(--bgcolor);
-  border-color: var(--color);
-  width: 150px;
-  height: 30px;
-  border-style: solid;
-  border-radius: 8px;
-  font-size: 18px;
-  transition-timing-function: ease-in-out;
-  transition: 1s;
+}
+
+.ez {
+  color: var(--txtcolor);
+  transition: 0.5s;
+  width: 30px;
+}
+
+.ez:hover {
+  width: 40px;
+color: var(--navbar);
+  transform: scale(1.1);
 }
 
 select {
@@ -184,16 +200,17 @@ select option {
 }
 
 .btn {
-  border-radius: 10px;
-  margin-top: 10px;
-  background: transparent;
-  color: white;
-  text-align: center;
-  width: 150px;
-  height: 30px;
-  border-style: solid;
-  -webkit-transition: 0.5s all ease;
-  transition: 0.5s ease all;
+  background-color: var(--bgcolor);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px var(--txtcolor);
+}
+.btn:hover {
+  background-color: #444;
 }
 
 
@@ -221,21 +238,41 @@ select option {
 }
 
 
-
-.input2 {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-  cursor: text;
-  border-style: solid;
-  margin-top: 10px;
+.input2, select {
+  padding: 15px;
+  margin-bottom: 20px;
+  width: calc(50% - 30px);
   border: none;
-  background: black;
-  color: white;
-  width: 200px;
-  padding: 10px;
-  border-radius: 10px;
-  outline: none;
+  border-radius: 5px;
+  background-color: var(--txtcolor);
+  color: #fff;
+  box-shadow: 0 0 10px var(--navbar);
 }
-
+.input2:focus, select:focus {
+  outline: none;
+  background-color: var(--bgcolor);
+}
+.section {
+  background-color: var(--navbar);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px var(--txtcolor);
+}
+.section h4 {
+  margin-top: 0;
+  color: var(--txtcolor); /* made by clipped (: */
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+hr {
+  border: none;
+  border-top: 1px solid #666;
+  margin: 20px 0;
+}
 .header {
    background-color: #262626; 
     color: #fff; 
