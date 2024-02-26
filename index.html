@@ -40,6 +40,36 @@
     l.parentNode.insertBefore(s, l);
     })({})
     </script>
+  <style>
+    .start-video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    .featured {
+      filter: blur(5px);
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      transition: filter 0.3s ease;
+    }
+  </style>
+  <div class="featured" id="featured">
+    <video src="https://cdn.glitch.me/9b4ab66d-4a49-447b-921f-410254cfc43e/better.mp4?v=1708907447457" class="start-video" autoplay muted loop>The video could not load</video>
+  </div>
   <div class="navbar">
     <a href="/"><img class="logo" src="/assets/images/jmw.png"></img></a>
     <div class="icons">
@@ -53,8 +83,8 @@
     <br>
     <br>
     <br>
-    <img style="height: 250px;" src="assets/images/banner.png"></img>
-    <h2 class="text-slate-300" ><span id="subtitle">Unblocking since 2021.</span></h2>
+    <img style="height: 250px;" src="assets/images/enew.png"></img>
+    <h2 class="text-slate-300" ><span id="subtitle">...</span></h2>
   </div>
   <br>
   <center>
@@ -77,19 +107,21 @@
   </div>
     <br>
     <footer>
-      <h6><i class="fa-solid fa-user-lock"></i> <strong>Trusted by 20k+</strong></h6>
+      <h6 style="color: black;"><i class="fa-solid fa-user-lock"></i> <strong>Trusted by 20k+</strong></h6>
     </footer>
     <center>
       <footer>
-        <h6><i class="fa-solid fa-gamepad"></i> Over 300+ games</h6>
+        <h6 style="color: black;"><i class="fa-solid fa-gamepad"></i> Over 300+ games</h6>
       </footer>
     </center>
   </div>
   <br>
   <div class="header">
+    <strong>
       <div id="yes">Jordan's Math Work</div>
       <div id="copyright" onclick="openCreditsURL()">© Jordan's Math Work 2024 - 2025</div>
   </div>
+</strong>
   <script>
       function openCreditsURL() {
 

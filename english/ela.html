@@ -16,250 +16,250 @@
   <style>
     .iframe {
       float: center;
-        width: 100%; 
-      height: 100%;
-      text-align: center;
-    }
-    .fullscreen {
-      font-size: 20;
-      border-radius: 8px;
-      border: none;
-      color: white;
-      font-size: 30px;
-      justify-content: space-between;
-    }
-    .reload {
-      font-size: 20;
-      border-radius: 8px;
-      border: none;
-      color: white;
-      font-size: 30px;
-      justify-content: space-between;
-    }
-    body {
-      background-color: #222;
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
+              width: 100%; 
+            height: 100%;
+            text-align: center;
+          }
+          .fullscreen {
+            font-size: 20;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            font-size: 30px;
+            justify-content: space-between;
+          }
+          .reload {
+            font-size: 20;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            font-size: 30px;
+            justify-content: space-between;
+          }
+          body {
+            background-color: #222;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+          }
 
-    .back-button {
-      position: fixed;
-      top: 1rem;
-      left: -4%;
-      background-color: yellow;
-      color: black;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      font-size: 1.2rem;
-      text-decoration: none;
-      transition: 0.7s ease;
-    }
+          .back-button {
+            position: fixed;
+            top: 1rem;
+            left: -4%;
+            background-color: yellow;
+            color: black;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: 0.7s ease;
+          }
 
-    .back-button:hover {
-      background-color: gray;
-        left: 1rem;
-      }
+          .back-button:hover {
+            background-color: gray;
+              left: 1rem;
+            }
 
-    a:hover {
-      
-    }
+          a:hover {
 
-    #game-container {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 780px;
-    }
+          }
 
-    #game-container iframe {
-      border: none;
-      float: center;
-        width: 1300px; 
-      height: 475px;
-      text-align: center;
-      border-radius: 5px;
-    }
+          #game-container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 780px;
+          }
 
-    #server-buttons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+          #game-container iframe {
+            border: none;
+            float: center;
+              width: 1300px; 
+            height: 475px;
+            text-align: center;
+            border-radius: 5px;
+          }
 
-    #server-buttons a {
-      display: block;
-      position: relative;
-      top: 0;
-      margin: 0 10px;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      font-size: 1.2rem;
-      text-decoration: none;
-      color: #EFEFEF;
-      background-color: #DD4A68;
-      transition: background-color 0.3s ease;
-    }
+          #server-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
 
-    #server-buttons a:hover {
-      background-color: #FF6B88;
-    }
+          #server-buttons a {
+            display: block;
+            position: relative;
+            top: 0;
+            margin: 0 10px;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: #EFEFEF;
+            background-color: #DD4A68;
+            transition: background-color 0.3s ease;
+          }
 
-    #loader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #1f1f1f;
-      z-index: 9999;
-      user-select: none;
-    }
+          #server-buttons a:hover {
+            background-color: #FF6B88;
+          }
 
-    #loader.hide {
-      animation: fadeOut 1s;
-      animation-fill-mode: forwards;
-    }
+          #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1f1f1f;
+            z-index: 9999;
+            user-select: none;
+          }
 
-    @keyframes fadeOut {
-      0% {
-        opacity: 1;
-      }
+          #loader.hide {
+            animation: fadeOut 1s;
+            animation-fill-mode: forwards;
+          }
 
-      100% {
-        opacity: 0;
-      }
-    }
+          @keyframes fadeOut {
+            0% {
+              opacity: 1;
+            }
 
-    #loader h1 {
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #fff;
-      font-size: 7vw;
-      font-weight: 700;
-      text-align: center;
-    }
+            100% {
+              opacity: 0;
+            }
+          }
 
-    #loader h1 span {
-      color: #ff0006;
-    }
+          #loader h1 {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 7vw;
+            font-weight: 700;
+            text-align: center;
+          }
 
-    #loader p {
-      position: absolute;
-      top: 53%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #fff;
-      font-size: 1.2vw;
-      font-weight: 500;
-      text-align: center;
-    }
+          #loader h1 span {
+            color: #ff0006;
+          }
 
-    #loader .loader {
-      position: absolute;
-      top: 63%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 6vw;
-      height: 6vw;
-      border-radius: 50%;
-      border: 10px solid #fff;
-      border-top-color: #941417;
-      animation: loader 1s linear infinite;
-    }
+          #loader p {
+            position: absolute;
+            top: 53%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 1.2vw;
+            font-weight: 500;
+            text-align: center;
+          }
 
-    @keyframes loader {
-      0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-      }
+          #loader .loader {
+            position: absolute;
+            top: 63%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 6vw;
+            height: 6vw;
+            border-radius: 50%;
+            border: 10px solid #fff;
+            border-top-color: #941417;
+            animation: loader 1s linear infinite;
+          }
 
-      100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-      }
-    }
-  </style>
-</head>
+          @keyframes loader {
+            0% {
+              transform: translate(-50%, -50%) rotate(0deg);
+            }
 
-<body theme="classic">
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({ pageLanguage: "en", layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, "google_translate_element");
-    }
-  </script>
+            100% {
+              transform: translate(-50%, -50%) rotate(360deg);
+            }
+          }
+        </style>
+      </head>
 
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  <br>
-  <div id="game-container" style="border-radius: 20px; background: #262626; height: 500px;">
-    <div class="iframe">
-      <iframe
-        class="abc" id="gameFramey"></iframe>
-      <br>
-    </div>
-    <br>
-      <div style="float: center; border-radius: 20px; background: #262626; height: 60px; bottom: -4%; top: 1rem; text-align: center;justify-content: center;">
-      <a style="color: white; background: transparent; text-decoration: none; font-size: 30px;  margin: 0px 10px;" href="/english/"><i class="fa-solid fa-angle-left"></i> Back</a>
-        <button onclick="reload()" style="background: transparent; width: 50px; right: 0;   margin: 0px 10px;" class="reload"><i class="fa-solid fa-rotate-right"></i></button>
-      <button onclick="toggleFullscreen()" style="background: transparent; width: 50px; right: 0;  margin: 0px 10px;" class="fullscreen"><i class="fa-solid fa-expand"></i></button>
-      </div>
-    </div>
-  </div>
-  <script>
-    var iframe = document.getElementById("gameFramey");
+      <body theme="classic">
+        <script type="text/javascript">
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: "en", layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, "google_translate_element");
+          }
+        </script>
 
-c   backButton.addEventListener('click', () => {
-      window.history.back();
-    });
-  </script>
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const file = urlParams.get('book');
-    const type = urlParams.get('type')
-    if (type == "3kh0") {
-      document.getElementById('gameFramey').src = 'https://raw.githack.com/galacticnetwork/3kh0-assets/main/' + file + '/index.html'
-    
-    }  else {
-      document.getElementById('gameFramey').src = "/english/src/" + file
-    }
-  </script>
-  <script>
-    function toggleFullscreen() {
-      let elem = document.querySelector('.abc');
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <br>
+        <div id="game-container" style="border-radius: 20px; background: #262626; height: 500px;">
+          <div class="iframe">
+            <iframe
+              class="abc" id="gameFramey"></iframe>
+            <br>
+          </div>
+          <br>
+            <div style="float: center; border-radius: 20px; background: #262626; height: 60px; bottom: -4%; top: 1rem; text-align: center;justify-content: center;">
+            <a style="color: white; background: transparent; text-decoration: none; font-size: 30px;  margin: 0px 10px;" href="/english/"><i class="fa-solid fa-angle-left"></i> Back</a>
+              <button onclick="reload()" style="background: transparent; width: 50px; right: 0;   margin: 0px 10px;" class="reload"><i class="fa-solid fa-rotate-right"></i></button>
+            <button onclick="toggleFullscreen()" style="background: transparent; width: 50px; right: 0;  margin: 0px 10px;" class="fullscreen"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+        <script>
+          var iframe = document.getElementById("gameFramey");
 
-      if (!document.fullscreenElement) {
-        elem.requestFullscreen().catch((err) => {
-          alert(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
-        });
-      } else {
-        document.exitFullscreen();
-      }
-    }
-    function toggleFullscreen() {
-      let elem = document.querySelector('.abc');
+      c   backButton.addEventListener('click', () => {
+            window.history.back();
+          });
+        </script>
+        <script>
+          const urlParams = new URLSearchParams(window.location.search);
+          const file = urlParams.get('book');
+          const type = urlParams.get('type')
+          if (type == "3kh0") {
+            document.getElementById('gameFramey').src = 'https://raw.githack.com/galacticnetwork/3kh0-assets/main/' + file + '/index.html'
 
-      if (!document.fullscreenElement) {
-        elem.requestFullscreen().catch((err) => {
-          alert(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
-        });
-      } else {
-        document.exitFullscreen();
-      }
-    }
-  </script>
-  <script>
-    function reload() {
-      var web = document.getElementById("gameFramey");
-      web.contentWindow.location.reload();
-      //web.src += ""
-    }
-  </script>
-</body>
-  <script src="/assets/scripts/settings1.js"></script>
-  <script src="/assets/scripts/settings2.js"></script>
-  <script src="/assets/scripts/index.js"></script>
-  <script src="/assets/scripts/themes.js"></script>
-  <script src="/assets/scripts/panic.js"></script>
-</html>
+          }  else {
+            document.getElementById('gameFramey').src = "/english/src/" + file
+          }
+        </script>
+        <script>
+          function toggleFullscreen() {
+            let elem = document.querySelector('.abc');
+
+            if (!document.fullscreenElement) {
+              elem.requestFullscreen().catch((err) => {
+                alert(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
+              });
+            } else {
+              document.exitFullscreen();
+            }
+          }
+          function toggleFullscreen() {
+            let elem = document.querySelector('.abc');
+
+            if (!document.fullscreenElement) {
+              elem.requestFullscreen().catch((err) => {
+                alert(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
+              });
+            } else {
+              document.exitFullscreen();
+            }
+          }
+        </script>
+        <script>
+          function reload() {
+            var web = document.getElementById("gameFramey");
+            web.contentWindow.location.reload();
+            //web.src += ""
+          }
+        </script>
+      </body>
+        <script src="/assets/scripts/settings1.js"></script>
+        <script src="/assets/scripts/settings2.js"></script>
+        <script src="/assets/scripts/index.js"></script>
+        <script src="/assets/scripts/themes.js"></script>
+        <script src="/assets/scripts/panic.js"></script>
+      </html>
