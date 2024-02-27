@@ -246,12 +246,13 @@ select option {
   border: none;
   border-radius: 5px;
   background-color: var(--txtcolor);
-  color: #fff;
+  color: white;
   box-shadow: 0 0 10px var(--navbar);
+  transition: 0.6s;
 }
 .input2:focus, select:focus {
   outline: none;
-  background-color: var(--bgcolor);
+  background-color: black;
 }
 .section {
   background-color: var(--navbar);
@@ -271,7 +272,7 @@ select option {
 }
 hr {
   border: none;
-  border-top: 1px solid #666;
+  border-top: 1px solid var(--txtcolor);
   margin: 20px 0;
 }
 .header {
