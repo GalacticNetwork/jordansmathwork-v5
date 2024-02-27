@@ -114,7 +114,7 @@ a.link:hover {
   opacity: 0.7;
   border-radius: 10px;
   background: var(--navbar);
-  box-shadow: 0px 0px 10px rgba(190, 190, 190, 0.7);
+  box-shadow: 0px 0px 10px var(--txtcolor);
   justify-content: space-between;
   font-size: 20px;
 }
@@ -168,7 +168,7 @@ a.link:hover {
 
 #themepicker:focus {
   outline: none;
-  background-color: var(--bgcolor);
+  background-color: var(--navbar);
 }
 
 .ez {
@@ -186,7 +186,7 @@ color: var(--navbar);
 select {
   font-family: 'Montserrat', sans-serif;
   color: white;
-  background-color: var(--bgcolor);
+  background-color: var(--navbar);
   width: 150px;
   height: 30px;
   border-radius: 8px;
@@ -201,7 +201,7 @@ select option {
 }
 
 .btn {
-  background-color: var(--bgcolor);
+  background-color: var(--navbar);
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -289,3 +289,28 @@ hr {
     border-radius: 2px;
   font-size: 21px;
 }
+  .start-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .featured {
+    filter: blur(5px);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: filter 0.3s ease;
+  }
