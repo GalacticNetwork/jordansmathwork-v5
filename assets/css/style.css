@@ -69,9 +69,6 @@ a.link:hover {
   box-shadow: 0 0 1vw var(--txtcolor);
   margin: 15px;
 }
-.ad {
-  font-size: 50px;
-}
 .injmwwetrust {
   font-size: 30px;
   color: gray;
@@ -172,16 +169,17 @@ a.link:hover {
 }
 
 .ez {
-  color: gray;
+  color: var(--txtcolor);
   transition: 0.5s;
-  width: 30px;
+  font-size: 30px;
+  transform: rotate(360deg);
 }
 
 .ez:hover {
-  width: 40px;
-color: var(--navbar);
-  transform: scale(1.1);
+   transform: rotate(360deg);
+color: darkgoldenrod;
 }
+
 
 select {
   font-family: 'Montserrat', sans-serif;
