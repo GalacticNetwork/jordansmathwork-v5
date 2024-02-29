@@ -150,8 +150,8 @@ a.link:hover {
 }
 .box {
   display: flex;
-  margin: 20px auto;
   flex-wrap: wrap;
+  margin: 20px auto;
   justify-content: center;
 }
 
