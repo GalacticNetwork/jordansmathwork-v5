@@ -242,8 +242,8 @@ select option {
   margin-bottom: 20px;
   width: calc(50% - 30px);
   border: none;
-  border-radius: 5px;
-  background-color: var(--txtcolor);
+  border-radius: 10px;
+  background-color: black;
   color: white;
   box-shadow: 0 0 10px var(--navbar);
   transition: 0.6s;
@@ -400,4 +400,4 @@ font-size: 20px;
 }
 .partner img {
   width: 200px;
-}
+i
