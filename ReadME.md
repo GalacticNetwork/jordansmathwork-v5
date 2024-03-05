@@ -7,11 +7,10 @@
 <h1 align="center"><a align="center" href="//infinitetutoring.online">Live demo</a></h1>
 
 ### Features:
-- 150+ games
+- 300+ games
 - automatic about:blank system
 - Clean UI
-- trusted by 20k
-- an extra exploit page
+- Blazing Fast proxy
 - chatbox
 # Credits
 - <a href="//github.com/slqntdevss">Slqnt - settings and themes and most of the css</a>
