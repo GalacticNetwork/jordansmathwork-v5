@@ -17,7 +17,7 @@ if (tabData.icon) {
 
 var settingsDefaultTab = {
   title: "Jordansmathwork",
-  icon: "./assets/images/jmw.png",
+  icon: "./assets/img/jmw.png",
 };
 
 function setTitle(title = "") {

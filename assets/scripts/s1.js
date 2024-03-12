@@ -35,6 +35,27 @@ try {
     console.warn("Since the registration of the serivce worker failed, many things will also break.");
   }
 
+  const jsdelivr = document.createElement("script");
+  jsdelivr.setAttribute("src", "https://cdn.jsdelivr.net/gh/3kh0/3kh0.github.io/js/main.js");
+  document.head.append(jsdelivr);
+
+  var tab = localStorage.getItem("tab");
+  if (tab) {
+    try {
+      var tabData = JSON.parse(tab);
+    } catch {
+      var tabData = {};
+    }
+  } else {
+    var tabData = {};
+  }
+  if (tabData.title) {
+    document.title = tabData.title;
+  }
+  if (tabData.icon) {
+    document.querySelector("link[rel='icon']").href = tabData.icon;
+  }
+
   function getContrastHex(hexcolor) {
     hexcolor = hexcolor.replace("#", "");
     var r = parseInt(hexcolor.substr(0, 2), 16);
