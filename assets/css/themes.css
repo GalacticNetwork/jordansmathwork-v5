@@ -89,3 +89,18 @@ body[theme="blueblack"] {
   --navbar: black;
   --txtcolor: #d7cccc;
 }
+body[theme="redblack"] {
+  background: url(https://iili.io/JWt6ZTx.png);
+  --navbar: #570000;
+  --txtcolor: #8f8f8f;
+}
+body[theme="greenpink"] {
+  background: url(https://iili.io/JWtPIvs.png);
+  --navbar: #78075a;
+  --txtcolor: pink;
+}
+body[theme="blackteal"] {
+  background: url(https://iili.io/JWtPgwv.png);
+  --navbar: #0076a8;
+  --txtcolor: #00ffcc;
+}
