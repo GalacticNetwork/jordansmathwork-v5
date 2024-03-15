@@ -84,3 +84,8 @@ body[theme="plexile"] {
   --navbar: #16181c;
   --txtcolor: #b03232;
 }
+body[theme="blueblack"] {
+  background: url(https://cdn.glitch.global/32522aaa-b118-401b-8f22-be0a0b08fdaa/gradient.png?v=1710524670795);
+  --navbar: black;
+  --txtcolor: #d7cccc;
+}
