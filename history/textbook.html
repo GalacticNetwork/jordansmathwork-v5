@@ -212,6 +212,8 @@
       <div style="float: center; border-radius: 20px; background: #262626; height: 60px; bottom: -4%; top: 1rem;text-align: center;justify-content: center;">
       <a style="color: white; background: transparent; text-decoration: none; font-size: 30px;  margin: 0px 10px;" href="/history/"><i class="fa-solid fa-angle-left"></i> Back</a>
         <button onclick="reload()" style="background: transparent; width: 50px; right: 0;   margin: 0px 10px;" class="reload"><i class="fa-solid fa-rotate-right"></i></button>
+        <button onclick="back()" style="background: transparent; width: 50px; right: 0;   margin: 0px 10px;" class="reload"><i class="fa-solid fa-chevron-left"></i></i></button>
+        <button onclick="forward()" style="background: transparent; width: 50px; right: 0;   margin: 0px 10px;" class="reload"><i class="fa-solid fa-chevron-right"></i></button>
       <button onclick="toggleFullscreen()" style="background: transparent; width: 50px; right: 0;  margin: 0px 10px;" class="fullscreen"><i class="fa-solid fa-expand"></i></button>
       </div>
     </div>
@@ -222,6 +224,17 @@
     <br>
     <h4>Register Proxy so it can work!</h4>
   </center>
+  <script>
+    function forward() {
+      var web = document.getElementById("gameFramey");
+      web.contentWindow.history.forward();
+    }
+
+    function back() {
+      var web = document.getElementById("gameFramey");
+      web.contentWindow.history.back();
+    }
+  </script>
   <script>
     var iframe = document.getElementById("gameFramey");
 
