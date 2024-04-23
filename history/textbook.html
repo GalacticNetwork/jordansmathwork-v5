@@ -8,8 +8,8 @@
   <title>TCI Textbook</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="https://www.teachtci.com/wp-content/uploads/2020/08/cropped-favicon-32x32.png" />
-    <link rel="shortcut icon" href="https://www.teachtci.com/wp-content/uploads/2020/08/cropped-favicon-32x32.png" />
+  <link rel="icon" href="https://cdnproduction.teachtci.com/assets/production-3e29e990/assets/favicon-7b4d266ea51c402bdd305020c853f97b3fac6b03d9f1dbc5e9fd17800577d939.svg" />
+    <link rel="shortcut icon" href="https://cdnproduction.teachtci.com/assets/production-3e29e990/assets/favicon-7b4d266ea51c402bdd305020c853f97b3fac6b03d9f1dbc5e9fd17800577d939.svg" />
   <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <script src="https://kit.fontawesome.com/a70619ef6c.js" crossorigin="anonymous"></script>
@@ -205,7 +205,7 @@
   <div id="game-container" style="border-radius: 20px; background: #262626; height: 500px;">
     <div class="iframe">
       <iframe
-        class="abc" id="gameFramey"></iframe>
+        class="abc" id="gameFramey" id="kakis"></iframe>
       <br>
     </div>
     <br>
@@ -226,21 +226,14 @@
   </center>
   <script>
     function forward() {
-      var web = document.getElementById("gameFramey");
+      var web = document.getElementById("kakis");
       web.contentWindow.history.forward();
     }
 
     function back() {
-      var web = document.getElementById("gameFramey");
+      var web = document.getElementById("kakis");
       web.contentWindow.history.back();
     }
-  </script>
-  <script>
-    var iframe = document.getElementById("gameFramey");
-
-c   backButton.addEventListener('click', () => {
-      window.history.back();
-    });
   </script>
   <script>
     const urlParams = new URLSearchParams(window.location.search);
