@@ -1,12 +1,13 @@
+// rc.js
+
 document.addEventListener('DOMContentLoaded', (event) => {
     const contextMenu = document.createElement('div');
     contextMenu.id = 'customContextMenu';
     contextMenu.style.position = 'absolute';
     contextMenu.style.display = 'none';
-    contextMenu.style.backgroundColor = 'var(--navbar);';
+    contextMenu.style.backgroundColor = '#ffffff';
     contextMenu.style.border = '1px solid #ccc';
     contextMenu.style.zIndex = '1000';
-    contextMenu.style.color = 'var(--txtcolor);';
 
     const aboutBlank = document.createElement('div');
     aboutBlank.textContent = 'about:blank';
