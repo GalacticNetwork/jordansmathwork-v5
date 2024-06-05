@@ -7,51 +7,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
     contextMenu.style.border = '1px solid #ccc';
     contextMenu.style.zIndex = '1000';
 
-    let abScriptLoaded = false;
-    let panicScriptLoaded = false;
-
     const aboutBlank = document.createElement('div');
-    aboutBlank.textContent = 'About:Blank Cloaker';
+    aboutBlank.textContent = 'about:blank';
     aboutBlank.style.padding = '8px';
     aboutBlank.style.cursor = 'pointer';
     aboutBlank.style.color = 'black';
     aboutBlank.onclick = function() {
-        if (!abScriptLoaded) {
-            loadScript('/assets/scripts/ab.js', () => {
-                if (typeof aboutBlankFunction === 'function') {
-                    ab();
-                }
-                contextMenu.style.display = 'none';
-                abScriptLoaded = true;
-            });
-        } else {
-            if (typeof aboutBlankFunction === 'function') {
-                ab();
-            }
-            contextMenu.style.display = 'none';
-        }
+        aboutBlankFunction();
+        contextMenu.style.display = 'none';
     };
 
     const panic = document.createElement('div');
-    panic.textContent = 'Panic';
+    panic.textContent = 'panic';
     panic.style.padding = '8px';
     panic.style.cursor = 'pointer';
     panic.style.color = 'black';
     panic.onclick = function() {
-        if (!panicScriptLoaded) {
-            loadScript('/assets/scripts/panic.js', () => {
-                if (typeof panicFunction === 'function') {
-                    panicFunction();
-                }
-                contextMenu.style.display = 'none';
-                panicScriptLoaded = true;
-            });
-        } else {
-            if (typeof panicFunction === 'function') {
-                panicFunction();
-            }
-            contextMenu.style.display = 'none';
-        }
+        panicFunction();
+        contextMenu.style.display = 'none';
     };
 
     contextMenu.appendChild(aboutBlank);
@@ -69,11 +42,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         contextMenu.style.display = 'none';
     });
 
-    function loadScript(url, callback) {
-        const script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = url;
-        script.onload = callback;
-        document.head.appendChild(script);
+    function aboutBlankFunction() {
+          let inFrame; try { inFrame = window !== top; } catch (e) { inFrame = true; }
+          if (!inFrame && !navigator.userAgent.includes("Firefox")) { const popup = open("about:blank", "_blank"); if (!popup || popup.closed) { alert("Allow popups and redirects."); } else { const doc = popup.document; const iframe = doc.createElement("iframe"); const style = iframe.style; const link = doc.createElement("link"); const name = localStorage.getItem("name") || "Home"; const icon = localStorage.getItem("icon") || "https://ssl.gstatic.com/classroom/favicon.png"; doc.title = name; link.rel = "icon"; link.href = icon; iframe.src = location.href; style.position = "fixed"; style.top = style.bottom = style.left = style.right = 0; style.border = style.outline = "none"; style.width = style.height = "100%"; doc.head.appendChild(link); doc.body.appendChild(iframe); location.replace("https://classroom.google.com"); } }
+    }
+
+    function panicFunction() {
+        location.replace('https://classroom.google.com');
     }
 });

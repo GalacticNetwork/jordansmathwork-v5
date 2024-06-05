@@ -3,9 +3,7 @@ if (localStorage.getItem("theme") != null) {
 }
 document.addEventListener("keydown", async (e) => {
   if (e.key == "`") window.parent.window.location.replace(localStorage.getItem("panicurl") || 'https://classroom.google.com/h')
-})``
-// panic.js
+})
 function panicFunction() {
     location.replace('https://classroom.google.com/h');
 }
-
