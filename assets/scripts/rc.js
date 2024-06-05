@@ -7,32 +7,51 @@ document.addEventListener('DOMContentLoaded', (event) => {
     contextMenu.style.border = '1px solid #ccc';
     contextMenu.style.zIndex = '1000';
 
+    let abScriptLoaded = false;
+    let panicScriptLoaded = false;
+
     const aboutBlank = document.createElement('div');
-    aboutBlank.textContent = 'about:blank';
+    aboutBlank.textContent = 'About:Blank Cloaker';
     aboutBlank.style.padding = '8px';
     aboutBlank.style.cursor = 'pointer';
     aboutBlank.style.color = 'black';
     aboutBlank.onclick = function() {
-        loadScript('/assets/scripts/ab.js', () => {
+        if (!abScriptLoaded) {
+            loadScript('/assets/scripts/ab.js', () => {
+                if (typeof aboutBlankFunction === 'function') {
+                    aboutBlankFunction();
+                }
+                contextMenu.style.display = 'none';
+                abScriptLoaded = true;
+            });
+        } else {
             if (typeof aboutBlankFunction === 'function') {
-                ab();
+                aboutBlankFunction();
             }
             contextMenu.style.display = 'none';
-        });
+        }
     };
 
     const panic = document.createElement('div');
-    panic.textContent = 'panic';
+    panic.textContent = 'Panic';
     panic.style.padding = '8px';
     panic.style.cursor = 'pointer';
     panic.style.color = 'black';
     panic.onclick = function() {
-        loadScript('/assets/scripts/panic.js', () => {
+        if (!panicScriptLoaded) {
+            loadScript('/assets/scripts/panic.js', () => {
+                if (typeof panicFunction === 'function') {
+                    panicFunction();
+                }
+                contextMenu.style.display = 'none';
+                panicScriptLoaded = true;
+            });
+        } else {
             if (typeof panicFunction === 'function') {
                 panicFunction();
             }
             contextMenu.style.display = 'none';
-        });
+        }
     };
 
     contextMenu.appendChild(aboutBlank);
