@@ -1,5 +1,3 @@
-// rc.js
-
 document.addEventListener('DOMContentLoaded', (event) => {
     const contextMenu = document.createElement('div');
     contextMenu.id = 'customContextMenu';
@@ -14,24 +12,28 @@ document.addEventListener('DOMContentLoaded', (event) => {
     aboutBlank.style.padding = '8px';
     aboutBlank.style.cursor = 'pointer';
     aboutBlank.style.color = 'black';
-    aboutBlank.addEventListener('click', () => {
-        const script = document.createElement('script');
-        script.src = '/assets/scripts/ab.js';
-        document.body.appendChild(script);
-        contextMenu.style.display = 'none';
-    });
+    aboutBlank.onclick = function() {
+        loadScript('/assets/scripts/ab.js', () => {
+            if (typeof aboutBlankFunction === 'function') {
+                ab();
+            }
+            contextMenu.style.display = 'none';
+        });
+    };
 
     const panic = document.createElement('div');
     panic.textContent = 'panic';
     panic.style.padding = '8px';
     panic.style.cursor = 'pointer';
     panic.style.color = 'black';
-    panic.addEventListener('click', () => {
-        const script = document.createElement('script');
-        script.src = '/assets/scripts/panic.js';
-        document.body.appendChild(script);
-        contextMenu.style.display = 'none';
-    });
+    panic.onclick = function() {
+        loadScript('/assets/scripts/panic.js', () => {
+            if (typeof panicFunction === 'function') {
+                panicFunction();
+            }
+            contextMenu.style.display = 'none';
+        });
+    };
 
     contextMenu.appendChild(aboutBlank);
     contextMenu.appendChild(panic);
@@ -47,4 +49,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.addEventListener('click', () => {
         contextMenu.style.display = 'none';
     });
+
+    function loadScript(url, callback) {
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = url;
+        script.onload = callback;
+        document.head.appendChild(script);
+    }
 });
