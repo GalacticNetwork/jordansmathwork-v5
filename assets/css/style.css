@@ -406,3 +406,9 @@ font-size: 20px;
   color: red;
   font-weight: bold;
 }
+#customContextMenu {
+  border: 1px solid var(--navbar);
+  background-color: var(--txtcolor);
+  color:white;
+  border-radius: 10px;
+}
