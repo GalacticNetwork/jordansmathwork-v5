@@ -19,14 +19,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
         if (!abScriptLoaded) {
             loadScript('/assets/scripts/ab.js', () => {
                 if (typeof aboutBlankFunction === 'function') {
-                    aboutBlankFunction();
+                    ab();
                 }
                 contextMenu.style.display = 'none';
                 abScriptLoaded = true;
             });
         } else {
             if (typeof aboutBlankFunction === 'function') {
-                aboutBlankFunction();
+                ab();
             }
             contextMenu.style.display = 'none';
         }
