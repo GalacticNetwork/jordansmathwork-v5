@@ -409,6 +409,6 @@ font-size: 20px;
 #customContextMenu {
   border: 1px solid var(--navbar);
   background-color: var(--txtcolor);
-  color:white;
+  color: white;
   border-radius: 10px;
 }

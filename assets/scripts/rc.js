@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     aboutBlank.textContent = 'about:blank';
     aboutBlank.style.padding = '8px';
     aboutBlank.style.cursor = 'pointer';
-    aboutBlank.style.color = 'black';
+    aboutBlank.style.color = 'var(--txtcolor)';
     aboutBlank.onclick = function() {
         aboutBlankFunction();
         contextMenu.style.display = 'none';
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     panic.textContent = 'panic';
     panic.style.padding = '8px';
     panic.style.cursor = 'pointer';
-    panic.style.color = 'black';
+    panic.style.color = 'var(--txtcolor)';
     panic.onclick = function() {
         panicFunction();
         contextMenu.style.display = 'none';
