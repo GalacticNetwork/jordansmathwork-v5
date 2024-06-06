@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     contextMenu.id = 'customContextMenu';
     contextMenu.style.position = 'absolute';
     contextMenu.style.display = 'none';
-    contextMenu.style.backgroundColor = '#ffffff';
+    contextMenu.style.backgroundColor = 'var(--navbar)';
     contextMenu.style.border = '1px solid #ccc';
     contextMenu.style.zIndex = '1000';
 
     const aboutBlank = document.createElement('div');
-    aboutBlank.textContent = 'about:blank';
+    aboutBlank.textContent = '<i class="fa-solid fa-eye-slash"></i> about:blank';
     aboutBlank.style.padding = '8px';
     aboutBlank.style.cursor = 'pointer';
     aboutBlank.style.color = 'var(--txtcolor)';
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     };
 
     const panic = document.createElement('div');
-    panic.textContent = 'panic';
+    panic.textContent = '<i class="fa-solid fa-triangle-exclamation"></i> panic';
     panic.style.padding = '8px';
     panic.style.cursor = 'pointer';
     panic.style.color = 'var(--txtcolor)';
