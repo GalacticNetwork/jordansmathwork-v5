@@ -3,6 +3,7 @@
 </p>
 
 <h1 align="center"><strong>JordansMathWork V5</strong></h1>
+<h1 align="center">This repo is officially archived.</h1>
 <p align="center">The key to unblocked games.</p>
 <h1 align="center"><a align="center" href="//infinitetutoring.online">Live demo</a></h1>
 
